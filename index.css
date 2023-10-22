@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 350px 50px 280px 40px 50px 280px 40px 60px 360px;
+    grid-template-areas:
+    "nav nav nav"
+    "banner banner banner"
+    "heading heading heading"
+    "articles articles articles"
+    "button button button"
+    "heading2 heading2 heading2"
+    "articles2 articles2 articles2"
+    "button2 button2 button2"
+    "signup signup signup"
+    "foot foot foot";
+  }
+  
+  .nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 0.3fr 1.1fr 0.3fr 0.3fr;
+    grid-template-rows: 60px;
+    background-color: rgb(155, 150, 150);
+  }
+  
+  .banner{
+    grid-area: banner;
+  }
+  
+  .heading{
+    grid-area: heading;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .articles{
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .button{
+    grid-area: button;
+  }
+  
+  .heading2{
+    grid-area: heading2;
+  }
+  
+  .articles2{
+    grid-area: articles2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .button2{
+    grid-area: button2;
+  }
+  
+  .signup{
+    grid-area: signup;
+    background-color: rgb(155, 150, 150);
+  }
+  
+  .foot{
+    grid-area: foot;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(20, 129, 42);
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .Container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 200px 50px 880px 40px 50px 880px 40px 90px 380px;
+    }
+    .articles{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    .articles2{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
